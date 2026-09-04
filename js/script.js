@@ -57,3 +57,16 @@ function b(name , age) {
 
 b("sumaiya", 19)
 
+let dark = document.getElementById("dark");
+let light = document.getElementById("light");
+
+dark.addEventListener("click",()=>{
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+})
+
+light.addEventListener("click",()=> {
+    document.body.style.background = "white";
+    document.body.style.color = "Black";
+})
+
