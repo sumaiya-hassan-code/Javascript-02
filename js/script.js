@@ -57,6 +57,8 @@ function b(name , age) {
 
 b("sumaiya", 19)
 
+// Dark light button
+
 let dark = document.getElementById("dark");
 let light = document.getElementById("light");
 
@@ -70,3 +72,19 @@ light.addEventListener("click",()=> {
     document.body.style.color = "Black";
 })
 
+// leap year button
+
+let input = document.getElementById("input");
+let button = document.getElementById("button");
+
+input.addEventListener("keyup",()=>{
+    button.addEventListener("click",()=>{
+        if (input.value%400==0 || input.value/100!=0 && input.value%4==0) {
+        alert("The year is Leap year")
+        } else {
+        alert("The year is not Leap year")
+        }
+    })
+})
+
+(year%400==0 || year/100!=0 && year%4==0)
