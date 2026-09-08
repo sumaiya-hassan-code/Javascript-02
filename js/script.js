@@ -63,13 +63,53 @@ let dark = document.getElementById("dark");
 let light = document.getElementById("light");
 
 dark.addEventListener("click",()=>{
-    document.body.style.background = "black";
+    document.body.style.background = "linear-gradient(135deg, #141E30, #243B55)";
     document.body.style.color = "white";
+    const input = document.querySelector("input");
+
+
+    document.querySelectorAll("button, input").forEach(element => {
+        element.style.border = "2px solid #00d9ff";
+    });
+    input.style.backgroundColor = "#1e293b";
+    input.style.color = "#ffffff";
+    input.style.border = "2px solid #00d9ff";
+
+    button.style.background ="#1e293b";
+    button.style.color ="#ffffff";
+    button.style.border ="#2px solid #00d9ff";
+
+    dark.style.background ="#1e293b";
+    dark.style.color ="#ffffff";
+    dark.style.border ="#2px solid #00d9ff";
+
+    light.style.background ="#1e293b";
+    light.style.color ="#ffffff";
+    light.style.border ="#2px solid #00d9ff";
+
 })
 
 light.addEventListener("click",()=> {
-    document.body.style.background = "white";
-    document.body.style.color = "Black";
+    document.body.style.background = "";
+    document.body.style.color = "";
+    document.querySelectorAll("button, input").forEach(element => {
+        element.style.border = "";
+    input.style.backgroundColor = "";
+    input.style.color = "";
+    input.style.border = "";
+    });
+
+    button.style.background ="";
+    button.style.color ="";
+    button.style.border ="";
+    
+    dark.style.background ="";
+    dark.style.color ="";
+    dark.style.border ="";
+
+    light.style.background ="";
+    light.style.color ="";
+    light.style.border ="";
 })
 
 // leap year button
@@ -81,9 +121,11 @@ input.addEventListener("keyup",()=>{
     button.addEventListener("click",()=>{
         if (input.value%400==0 || input.value/100!=0 && input.value%4==0) {
         alert("The year is Leap year")
-        } else {
+        }
+        else {
         alert("The year is not Leap year")
         }
+
     })
 })
 
