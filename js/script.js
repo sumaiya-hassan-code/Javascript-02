@@ -61,6 +61,7 @@ b("sumaiya", 19)
 
 let dark = document.getElementById("dark");
 let light = document.getElementById("light");
+let text = document.getElementById("text");
 
 dark.addEventListener("click",()=>{
     document.body.style.background = "linear-gradient(135deg, #141E30, #243B55)";
@@ -87,6 +88,8 @@ dark.addEventListener("click",()=>{
     light.style.color ="#ffffff";
     light.style.border ="#2px solid #00d9ff";
 
+    text.style.color= "white";
+
 })
 
 light.addEventListener("click",()=> {
@@ -110,6 +113,9 @@ light.addEventListener("click",()=> {
     light.style.background ="";
     light.style.color ="";
     light.style.border ="";
+
+    text.style.color= "";
+
 })
 
 // leap year button
